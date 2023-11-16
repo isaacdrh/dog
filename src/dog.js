@@ -19,7 +19,6 @@ class Dog {
     this.age = age;
     this.color = color;
     this.isSleeping = false;
-    this.tricks = [];
   }
 
   /**
@@ -66,23 +65,11 @@ class Dog {
    * @return {string} A message indicating that the dog learned a new trick.
    */
   learnTrick(trick) {
+    if (trick == null || trick == '' ) {
+      throw new Error('Trick cannot be empty');
+    }
     this.tricks.push(trick);
     return `${this.name} learned a new trick: ${trick}.`;
-  }
-
-  /**
-   * Makes the dog perform a random trick it has learned.
-   *
-   * @return {string} A message indicating the trick the dog is performing.
-   */
-  doTrick() {
-    if (this.tricks.length === 0) {
-      return `${this.name} doesn't know any tricks yet.`;
-    } else {
-      const randomTrickIndex = Math.floor(Math.random() * this.tricks.length);
-      const randomTrick = this.tricks[randomTrickIndex];
-      return `${this.name} is doing the trick: ${randomTrick}.`;
-    }
   }
 
   bark() {
@@ -99,4 +86,4 @@ class Dog {
   }
 }
 
-module.exports = Dog;
+export default Dog;
