@@ -27,7 +27,7 @@ class Dog {
    * @return {string} The description of a dog.
    */
   getDescription() {
-    return `${this.name} - ${this.breed}`;
+    // to do: retornar la concatenación de this.name y this.breed
   }
 
   /**
@@ -36,12 +36,7 @@ class Dog {
    * @return {string} A message indicating that the dog is now sleeping.
    */
   sleep() {
-    if (!this.isSleeping) {
-      this.isSleeping = true;
-      return `${this.name} is now sleeping.`;
-    } else {
-      return `${this.name} is already sleeping.`;
-    }
+    // to do - leer el jsdoc
   }
 
   /**
@@ -50,12 +45,7 @@ class Dog {
    * @return {string} A message indicating that the dog woke up.
    */
   wakeUp() {
-    if (this.isSleeping) {
-      this.isSleeping = false;
-      return `${this.name} woke up.`;
-    } else {
-      return `${this.name} is already awake.`;
-    }
+    // to do - leer el jsdoc
   }
 
   /**
@@ -72,17 +62,22 @@ class Dog {
     return `${this.name} learned a new trick: ${trick}.`;
   }
 
+  /**
+   * Makes the dog bark.
+   *
+   * @return {string} A message indicating "Woof! Woof!".
+   */  
   bark() {
-    return `Woof! Woof!`;
+    // to do - leer el jsdoc
   }
 
   /**
    * Displays information about the dog.
    *
-   * @return {string} Information about the dog.
+   * @return {string} All the information about the dog.
    */
   displayInfo() {
-    return `Name: ${this.name}, Breed: ${this.breed}, Age: ${this.age}, Color: ${this.color}`;
+    // to do - leer el jsdoc
   }
 }
 
